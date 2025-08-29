@@ -62,6 +62,24 @@ Integration & async: Event bus for decoupling (notifications, analytics, billing
 Observability & Ops: CI/CD, containerized runtime, centralized logging/metrics/tracing.
 
 e. Suggest an appropriate software stack
+Mobile (Primary):
+Framework: React Native (cross-platform for iOS & Android, code reuse, push notifications, camera integration for maintenance photos).
+Alternative: Flutter if you prefer stronger performance and a unified UI across devices.
+Web (Secondary, for Landlord/PM dashboards):
+Framework: React + Next.js (SSR for SEO-friendly event listings, fast dashboards).
+UI Components: Tailwind CSS or Material UI for consistency.
+State Management: React Query (for API cache) + Context/Zustand.
+⚙️ Backend
+Language & Framework:
+Node.js + NestJS (structured, modular, TypeScript end-to-end with React Native/Web).
+Alternative: Java (Spring Boot) or Python (FastAPI/Django Rest Framework) if team prefers.
+API Layer:
+REST API for CRUD endpoints.
+GraphQL (Apollo Server) for mobile dashboard queries (reduce over-fetching).
+WebSockets (or Socket.IO) for real-time messaging + maintenance request updates.
+Authentication & Authorization:
+OAuth 2.1 / OIDC (Auth0, AWS Cognito, or Keycloak if self-hosted).
+JWTs with role-based claims (Tenant, Landlord, PropertyManager, Maintenance).
 ✅ Summary Recommendation:
 Frontend: React Native (mobile) + React/Next.js (web)
 Backend: Node.js + NestJS (REST + GraphQL), PostgreSQL + MongoDB, Redis
@@ -70,8 +88,12 @@ Notifications: FCM/APNs + Twilio + SendGrid
 Infra: AWS (EKS, S3, RDS, CloudFront), CI/CD with GitHub Actions
 
 2. Reflextion and evaluation
-a. 
-b.
-c.
-d.
-e.
+a. I agree. Overall I think this problem statement suggestion was reasonable. It gave background into the problem, and then outlined what the app would need to do. The only fault I could find is that the AI said "Stay informed about and engage with community events", which is slightly different from the task of allowing users to "View a list of community events".
+
+b. I agree. I think that the user stories were reasonable given the problem statement. It considered the stories of both landlords and tenants, giving multiple stories that covered every functional requirement we had, plus a few extra requirements.
+
+c. I also agreed with the AI on this prompt. I think that a mobile app is just the most convenient way for both tenants and landlords to access the application, since they can access it from anywhere. It also makes sense to suggest that it also be accessible by computer, in case landlords want to work from their computers to do more complicated work.
+
+d. I kind of agreed with the AI. It sounded like it was proposing Client-Server Architecture, but a specific kind that I'm not familiar with(modular monolith). It considered scaling as well.
+
+e. I agree with the AI here too, it is listing tools that are widely used in software development (React frontend, Node.js backend). This is a familiar architecture that I have seen, so I think this suggestion is reasonable.
